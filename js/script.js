@@ -1,22 +1,19 @@
 "use strict";
 
+let numberOfFilms = prompt("Количество просмотреных фильмов", "Число");
+console.log(numberOfFilms);
 
-const obj = {
-    name: "Mark",
-    work: "bomj",
-    age: 5,
-    isLox: true
+let personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    private: false
 };
-console.log(obj.isLox);
-
-let arr = ['giga', 2, 'kek', true];
-console.log(arr[3]);
-const result = confirm("are you here");
-const ans = prompt("Ты даун", "Да");
-console.log(ans);
-
-const zopa = "lil";
-console.log(`https://someurl.com/${zopa}/5`);
-
-const daun = 'Vlad';
-console.log("privet"+daun);
+const lastFilm = prompt("Последний фильм", ""),
+    mark = prompt("Оценка", ""),
+    lastFilm2 = prompt("Последний фильм", ""),
+    mark2 = prompt("Оценка", "");
+personalMovieDB.movies[lastFilm] = mark;
+personalMovieDB.movies[lastFilm2] = mark2;
+console.log(personalMovieDB);
